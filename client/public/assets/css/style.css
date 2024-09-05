@@ -526,6 +526,7 @@ header .header-col.mid .social-icons {
     margin-top: 100px;
     margin-bottom: 10px;
     letter-spacing: -2px;
+    color: var(--title-font-color);
 }
 
 #subheader.dark {
@@ -3614,6 +3615,7 @@ a.btn-line,
     border-radius:5px;
     -moz-border-radius:5px;
     -webkit-border-radius:5px;
+    cursor: pointer;
 }
 
 a.btn-sc{
@@ -9543,7 +9545,8 @@ a.a-underline *,
 #contact_form *,
 .de-item *,
 .de-preloader,
-#purchase-now *{
+#call-now,
+#whatsapp-now *{
     -o-transition: .5s;
     -ms-transition: .5s;
     -moz-transition: .5s;
@@ -12761,29 +12764,59 @@ body.dark-scheme::-webkit-scrollbar-track,#de_modal::-webkit-scrollbar-track {
     align-items: center;
 }
 
-#purchase-now {
+#call-now {
     position: fixed;
-    bottom: 80px;
-    left: 20px;
+    bottom: 60px;
+    left: 0px;
     z-index: 10000;
+    width:100px;
 }
 
-#purchase-now a {
+#whatsapp-now {
+    position: fixed;
+    bottom: 60px;
+    right: -25px;
+    z-index: 10000;
+    width:100px;
+}
+
+#call-now a {
     color: #ffffff;
     z-index: 1;
     position: absolute;
     border-radius: 60px;
     -moz-border-radius: 60px;
     -webkit-border-radius: 60px;
-    background: #83B540;
+    background: #121212;
     display: block;
     font-size: 24px;
     font-weight: bold;
-    width: 60px;
-    height: 60px;
-    padding: 17px;
+    width: 50px;
+    height: 50px;
+    padding: 14px;
     text-decoration: none;
     animation: shadow-pulse 1s infinite;
+}
+
+#whatsapp-now a {
+    color: #fff;
+    z-index: 1;
+    position: absolute;
+    border-radius: 60px;
+    -moz-border-radius: 60px;
+    -webkit-border-radius: 60px;
+    background: var(--primary-color);
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 14px;
+    text-decoration: none;
+    animation: shadow-pulse 1s infinite;
+}
+
+#call-now a i, #whatsapp-now a i  {
+    font-size: 25px;
+    font-weight: bold;
 }
 
 @keyframes shadow-pulse {
@@ -12796,16 +12829,7 @@ body.dark-scheme::-webkit-scrollbar-track,#de_modal::-webkit-scrollbar-track {
     }
 }
 
-#purchase-now{
-    width:100px;
-    position: fixed;
-}
-
-.rtl #purchase-now{
-    left: -20px;
-}
-
-#purchase-now a span {
+#call-now a span {
     font-size: 14px;
     font-weight: 500;
     left: 8px;
@@ -12813,7 +12837,15 @@ body.dark-scheme::-webkit-scrollbar-track,#de_modal::-webkit-scrollbar-track {
     top: 18px;
 }
 
-#purchase-now .pn-hover {
+#whatsapp-now a span {
+    font-size: 14px;
+    font-weight: 500;
+    left: 8px;
+    position: absolute;
+    top: 18px;
+}
+
+#call-now .pn-hover {
     position: absolute;
     font-weight: bold;
     font-size: 16px;
@@ -12831,15 +12863,33 @@ body.dark-scheme::-webkit-scrollbar-track,#de_modal::-webkit-scrollbar-track {
     opacity: 0;
 }
 
-#purchase-now:hover .pn-hover {
+#whatsapp-now .pn-hover {
+    position: absolute;
+    font-weight: bold;
+    font-size: 16px;
+    background: #ffffff;
+    color: #83B540;
+    width: 120px;
+    padding: 10px;
+    padding-left: 20px;
+    text-align: center;
+    top: 8px;
+    border-radius:6px;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    left: 30px;
+    opacity: 0;
+}
+
+#call-now:hover .pn-hover {
     opacity: 1;
     left: 40px;
 }
 
-.rtl #purchase-now:hover .pn-hover {
-    left: 80px;
+#whatsapp-now:hover .pn-hover {
+    opacity: 1;
+    left: 40px;
 }
-
 
 .de-images {
     position: relative;
@@ -18070,7 +18120,7 @@ img {
 
     header.header-mobile #mainmenu li ul li {
         border: none;
-        padding-left: 40px;
+        padding-left: 0px;
     }
 
     header #mainmenu li ul li:first-child {
