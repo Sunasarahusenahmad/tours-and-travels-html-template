@@ -9,51 +9,54 @@ return (
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form name="contactForm" id='contact_form' class="form-border" method="post" action='blank.php'>
+                <form name="contactForm" id='contact_form' class="form-border" method="post">
                     <div class="row">
                         <div class="col-md-6">
                         <div class="field-set">
-                            <label>Name:</label>
+                            <label>Name :</label>
                             <input type='text' name='name' id='name' class="form-control"/>
                         </div>
                         </div>
                         <div class="col-md-6">
                         <div class="field-set">
-                            <label>Email Address:</label>
-                            <input type='text' name='email' id='email' class="form-control"/>
+                            <label>Contact Number :</label>
+                            <input type='tel' maxLength={10} name='contact' id='contact' class="form-control"/>
+                        </div>
+                        </div>
+                        <div class="col-md-12">
+                        <div class="field-set">
+                            <label>Address :</label>
+                            <textarea rows={4} name='address' id='address' class="form-control"/>
                         </div>
                         </div>
                         <div class="col-md-6">
                         <div class="field-set">
-                            <label>Choose a Username:</label>
-                            <input type='text' name='username' id='username' class="form-control"/>
+                            <label>From :</label>
+                            <input type='text' name='from' id='from' class="form-control"/>
                         </div>
                         </div>
                         <div class="col-md-6">
                         <div class="field-set">
-                            <label>Phone:</label>
-                            <input type='text' name='phone' id='phone' class="form-control"/>
+                            <label>To :</label>
+                            <input type='text' name='to' id='to' class="form-control"/>
                         </div>
                         </div>
                         <div class="col-md-6">
                         <div class="field-set">
-                            <label>Password:</label>
-                            <input type='text' name='password' id='password' class="form-control"/>
+                            <label>Date :</label>
+                            <input type='date' name='date' id='date' class="form-control"/>
                         </div>
                         </div>
                         <div class="col-md-6">
                         <div class="field-set">
-                            <label>Re-enter Password:</label>
-                            <input type='text' name='re-password' id='re-password' class="form-control"/>
+                            <label>Time :</label>
+                            <input type='time' name='time' id='time' class="form-control"/>
                         </div>
                         </div>
                         <div class="col-md-12">
                         <div id='submit' class="pull-left">
                             <input type='submit' id='send_message' value='Register Now' class="btn-main color-2"/>
                         </div>
-                        <div id='mail_success' class='success'>Your message has been sent successfully.</div>
-                        <div id='mail_fail' class='error'>Sorry, error occured this time sending your message.</div>
-                        <div class="clearfix"></div>
                         </div>
                     </div>
                 </form>
