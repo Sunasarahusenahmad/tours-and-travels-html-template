@@ -35,7 +35,6 @@
     --title-font-color: #020202;
     --dark-body-font-color: rgba(255, 255, 255, .75);
     --gray-color:#acacac;
-
 }
 
 .g-custom{
@@ -1670,6 +1669,7 @@ header.header-light .logo-2 {
 
 .topbar-right {
     float: right;
+    margin-top: 4px;
 }
 
 .topbar-solid {
@@ -1712,7 +1712,6 @@ header.header-light .logo-2 {
 #topbar .social-icons i{
     background: none;
     margin: 0;
-    margin-top: 5px;
     color:#ffffff;
 }
 
@@ -1931,7 +1930,6 @@ header.header-light .logo-2 {
 }
 
 .bloglist .date-box{
-    width:54px;
     position:absolute;
     text-align:center;
     color:#fff;
@@ -1941,10 +1939,9 @@ header.header-light .logo-2 {
     -webkit-border-radius:5px;
 }
 .bloglist .date-box .m{
-    font-weight: bold;
-    font-size:32px;
-    padding:8px;
-    padding-bottom: 0;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 0 10px;
 }
 .bloglist .date-box .d{
     font-size:10px;
@@ -6993,6 +6990,11 @@ header.smaller{
   top: 44px;
   animation-delay: 0.2s;
 }
+.d-img img {
+    width: 100%; 
+    height: 200px;
+    object-fit: cover; 
+}  
 .car-detail {
   position: absolute;
   display: block;
@@ -7121,7 +7123,7 @@ header.smaller{
 .social-icons i {
     text-shadow: none;
     color: #fff;
-    padding: 15px 10px 8px 10px;
+    padding: 12px 10px 8px 10px;
     width: 40px;
     height: 40px;
     text-align: center;
@@ -10455,6 +10457,7 @@ a.de-card:hover {
     -webkit-border-radius: 10px;
     position: relative;
     overflow: hidden;
+    /* background: #1ecb15; */
 }
 .de-image-text img{
     width: 100%;
@@ -18848,4 +18851,38 @@ img {
         left: 0;
         top: -21px;
     }
+}
+/* Style for the modal scrollable content */
+.modal-dialog-scrollable .modal-body {
+    max-height: calc(100vh - 150px); /* Adjust based on your design */
+    overflow-y: auto; /* Ensure scrollbar appears if content overflows */
+}
+
+/* Custom scrollbar styles for WebKit browsers */
+.modal-dialog-scrollable .modal-body::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+.modal-dialog-scrollable .modal-body::-webkit-scrollbar-track {
+    background: #1ecb15; /* Background of the scrollbar track */
+}
+
+.modal-dialog-scrollable .modal-body::-webkit-scrollbar-thumb {
+    background:  #1ecb15; /* Color of the scrollbar thumb */
+    border-radius: 20px; /* Rounded corners of the scrollbar thumb */
+}
+
+.modal-dialog-scrollable .modal-body::-webkit-scrollbar-thumb:hover {
+    background: #179510;
+}
+
+/* Custom scrollbar styles for Firefox */
+.modal-dialog-scrollable .modal-body {
+    scrollbar-width: thin; /* Width of the scrollbar */
+    scrollbar-color: #179510; /* Color of the thumb and track */
+}
+.tourist-img {
+    width: 100%;
+    height: 235px;
+    object-fit: cover;
 }
